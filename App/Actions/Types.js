@@ -5,6 +5,7 @@ export default createTypes(`
   LOGIN_ATTEMPT
   LOGIN_SUCCESS
   LOGIN_FAILURE
+  
   JUPITER
 
   LOGOUT
@@ -14,4 +15,11 @@ export default createTypes(`
   TEMPERATURE_REQUEST
   TEMPERATURE_RECEIVE
   TEMPERATURE_FAILURE
+
+
+  LOAD_PAGE
+  ADD_ITEM
+  REMOVE_ITEM
+  PAGE_CHANGE
+
 `)

@@ -33,6 +33,7 @@ class UsageExamplesScreen extends React.Component {
     listviewExample: PropTypes.func,
     listviewGridExample: PropTypes.func,
     Jupiter: PropTypes.func, 
+    HotDates: PropTypes.func,
     mapviewExample: PropTypes.func
   }
 
@@ -144,6 +145,9 @@ renderJupiterButton () {
         <View>
           <RoundedButton text='Listview Grid' onPress={this.props.listviewGridExample} />
         </View>
+        <View>
+          <RoundedButton text='Hot Dates Listview' onPress={this.props.HotDates} />
+        </View>
       </View>
     )
   }
@@ -177,11 +181,12 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     login: NavigationActions.login,
-    jupiter: NavigationActions.Planets,
+    jupiter: NavigationActions.Jupiter,
     logout: () => dispatch(Actions.logout()),
     requestTemperature: (city) => dispatch(Actions.requestTemperature(city)),
     listviewExample: NavigationActions.listviewExample,
     listviewGridExample: NavigationActions.listviewGridExample,
+    HotDates: NavigationActions.HotDates,
     mapviewExample: NavigationActions.mapviewExample
   }
 }

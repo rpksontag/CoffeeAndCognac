@@ -9,8 +9,7 @@ const loginSuccess = (username) =>
 const loginFailure = (errorCode) =>
   ({ type: Types.LOGIN_FAILURE, errorCode })
 
-const jupiter = (username) =>
-  ({ type: Types.JUPITER, username })  
+const jupiter = () => ({ type: Types.JUPITER })  
 
 
 const logout = () => ({ type: Types.LOGOUT })
@@ -20,6 +19,11 @@ const startup = () => ({ type: Types.STARTUP })
 const requestTemperature = (city) => ({ type: Types.TEMPERATURE_REQUEST, city })
 const receiveTemperature = (temperature) => ({ type: Types.TEMPERATURE_RECEIVE, temperature })
 const receiveTemperatureFailure = () => ({ type: Types.TEMPERATURE_FAILURE })
+
+const loadPage = () => ({ type: Types.LOAD_PAGE })
+const addItem = () => ({ type: Types.ADD_ITEM })
+const removeItem = () => ({ type: Types.REMOVE_ITEM })
+const pageChange = () => ({ type: Types.PAGE_CHANGE })
 
 /**
  Makes available all the action creators we've created.
