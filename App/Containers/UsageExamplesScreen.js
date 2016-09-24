@@ -50,20 +50,7 @@ class UsageExamplesScreen extends React.Component {
     }
   }
 
-  // fires when we tap the rocket!
-  handlePressRocket = () => {
-    this.props.requestTemperature('Boise')
-  }
-
-  // fires when tap send
-  handlePressSend = () => {
-    this.props.requestTemperature('Toronto')
-  }
-
-  // fires when tap star
-  handlePressStar = () => {
-    this.props.requestTemperature('New Orleans')
-  }
+ 
 
   renderLoginButton () {
     return (
@@ -73,13 +60,7 @@ class UsageExamplesScreen extends React.Component {
     )
   }
 
-renderJupiterButton () {
-    return (
-      <RoundedButton onPress={this.props.jupiter}>
-        {I18n.t('jupiter')}
-      </RoundedButton>
-    )
-  }
+
 
   renderLogoutButton () {
     return (
@@ -111,20 +92,7 @@ renderJupiterButton () {
         <View style={[styles.groupContainer, {height: 50}]}>
           <Text style={styles.temperature}>{temperature && `${temperature} ${I18n.t('tempIndicator')}`}</Text>
         </View>
-        {this.renderHeader(I18n.t('rnVectorIcons'))}
-        <View style={styles.groupContainer}>
-          <TouchableOpacity onPress={this.handlePressRocket}>
-            <Icon name='rocket' size={Metrics.icons.medium} color={Colors.ember} />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={this.handlePressSend}>
-            <Icon name='send' size={Metrics.icons.medium} color={Colors.error} />
-          </TouchableOpacity>
-          <TouchableOpacity onPress={this.handlePressStar}>
-            <Icon name='star' size={Metrics.icons.medium} color={Colors.snow} />
-          </TouchableOpacity>
-          <Icon name='trophy' size={Metrics.icons.medium} color={Colors.error} />
-          <Icon name='warning' size={Metrics.icons.medium} color={Colors.ember} />
-        </View>
+        
         <View style={styles.groupContainer}>
           <Icon.Button name='facebook' style={styles.facebookButton} backgroundColor={Colors.facebook} onPress={() => window.alert('Facebook')}>
             {I18n.t('loginWithFacebook')}
@@ -132,22 +100,19 @@ renderJupiterButton () {
         </View>
         {this.renderHeader(I18n.t('rnAnimatable'))}
         <View style={styles.groupContainer}>
-          <Animatable.Text animation='fadeIn' iterationCount='infinite' direction='alternate' style={styles.subtitle}>{I18n.t('rnAnimatable')}</Animatable.Text>
-          <Animatable.Image animation='pulse' iterationCount='infinite' source={Images.logo} />
-          <Animatable.View animation='jello' iterationCount='infinite' >
-            <Icon name='cab' size={Metrics.icons.medium} color={Colors.snow} />
-          </Animatable.View>
+          
+          <Animatable.Image animation='jello' iterationCount='infinite' source={Images.logo} />
+         
+           
         </View>
         {this.renderHeader(I18n.t('igniteGenerated'))}
         <View>
-          <RoundedButton text='Listview' onPress={this.props.listviewExample} />
+          <RoundedButton text='Order Menu List' onPress={this.props.listviewExample} />
         </View>
         <View>
-          <RoundedButton text='Listview Grid' onPress={this.props.listviewGridExample} />
+          <RoundedButton text='Order Menu Grid' onPress={this.props.listviewGridExample} />
         </View>
-        <View>
-          <RoundedButton text='Hot Dates Listview' onPress={this.props.HotDates} />
-        </View>
+      
       </View>
     )
   }

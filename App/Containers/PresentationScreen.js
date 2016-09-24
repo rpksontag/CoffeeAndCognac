@@ -16,7 +16,8 @@ class PresentationScreen extends React.Component {
     apiTesting: PropTypes.func,
     theme: PropTypes.func,
     deviceInfo: PropTypes.func,
-    jupiter: PropTypes.func
+    jupiter: PropTypes.func,
+    placeOrders: PropTypes.func 
   }
 
   render () {
@@ -30,34 +31,23 @@ class PresentationScreen extends React.Component {
 
           <View style={styles.section} >
             <Text style={styles.sectionText} >
-              Default screens for development, debugging, and alpha testing
-              are available below.
+             Welcome to The Barley and Bean.
             </Text>
+            <Text style={styles.subtitle}>Purveyors of Fine Coffees and Craft Beers</Text>
           </View>
 
-           <RoundedButton onPress={this.props.jupiter}>
-            Jupiter Screen
+
+           <RoundedButton onPress={this.props.placeOrders}>
+            Place Your Orders Screen
            </RoundedButton>
 
-          <RoundedButton onPress={this.props.componentExamples}>
-            Component Examples Screen
-          </RoundedButton>
-
           <RoundedButton onPress={this.props.usageExamples}>
-            Usage Examples Screen
+            Login/Sign Up
           </RoundedButton>
 
-          <RoundedButton onPress={this.props.apiTesting}>
-            API Testing Screen
-          </RoundedButton>
+         
 
-          <RoundedButton onPress={this.props.theme}>
-            Theme Screen
-          </RoundedButton>
-
-          <RoundedButton onPress={this.props.deviceInfo}>
-            Device Info Screen
-          </RoundedButton>
+         
 
           <View style={styles.centered}>
             <Text style={styles.subtitle}>Made by The Fire Fetts and The Heavens</Text>
@@ -81,7 +71,8 @@ const mapDispatchToProps = (dispatch) => {
     apiTesting: NavigationActions.apiTesting,
     theme: NavigationActions.theme,
     deviceInfo: NavigationActions.deviceInfo,
-    jupiter: NavigationActions.jupiter
+    jupiter: NavigationActions.jupiter,
+    placeOrders: NavigationActions.placeOrders
   }
 }
 

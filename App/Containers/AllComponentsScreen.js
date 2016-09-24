@@ -11,6 +11,7 @@ import '../Components/ProgressiveImage'
 import '../Components/FullButton'
 import '../Components/RoundedButton'
 import '../Components/JupiterButton'
+import '../Components/PlaceYourOrders'
 // Examples Render Engine
 import ExamplesRegistry from '../Services/ExamplesRegistry'
 

@@ -3,7 +3,7 @@ import {Platform} from 'react-native'
 
 Reactotron.connect({
   enabled: __DEV__,
-  name: 'Fire Fetts',
+  name: 'Fire Fetts Seminole',
   userAgent: Platform.OS
 })
 
